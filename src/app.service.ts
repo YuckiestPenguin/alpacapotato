@@ -1,5 +1,5 @@
 import {Injectable} from '@nestjs/common';
-import {client} from './config/alpacaClient.config';
+import {client} from "./config/alpacaClient.config";
 
 @Injectable()
 export class AppService {
