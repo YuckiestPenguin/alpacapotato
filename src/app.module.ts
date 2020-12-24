@@ -6,9 +6,10 @@ import { AccountModule } from './account/account.module';
 import { OrdersModule } from './orders/orders.module';
 import { PositionsModule } from './positions/positions.module';
 import { AssetsModule } from './assets/assets.module';
+import { QuotesModule } from './quotes/quotes.module';
 
 @Module({
-  imports: [ConfigModule.forRoot({}), AccountModule, OrdersModule, PositionsModule, AssetsModule],
+  imports: [ConfigModule.forRoot({}), AccountModule, OrdersModule, PositionsModule, AssetsModule, QuotesModule],
   controllers: [AppController],
   providers: [AppService],
 })
