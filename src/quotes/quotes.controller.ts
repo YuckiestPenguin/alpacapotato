@@ -7,9 +7,11 @@ export class QuotesController {
   @Get(':stockTicker')
   async getQuote(@Param('stockTicker') stockTicker: string) {
     try {
-      return await client.getLastQuote({symbol: `${stockTicker}`});
+      return await client.getLastQuote({symbol: `${stockTicker.toUpperCase()}`});
     } catch (e) {
+
       console.log(e);
+      return;
     }
   }
 
