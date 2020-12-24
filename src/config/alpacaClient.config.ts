@@ -1,10 +1,9 @@
 import alpaca from '@master-chief/alpaca';
-import configuration from './alpaca.config';
 
 export const client = new alpaca.AlpacaClient({
   credentials: {
-    key: configuration().apiKeyID,
-    secret: configuration().secretKey,
+    key: process.env.API_KEY_ID,
+    secret: process.env.SECRET_KEY,
   },
   rate_limit: true,
 });
