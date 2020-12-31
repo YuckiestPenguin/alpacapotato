@@ -6,8 +6,5 @@ export class AppController {
   constructor(private readonly appService: AppService) {
   }
 
-  @Get()
-  getAccountInfo() {
-    return this.appService.getAccountInfo();
-  }
+
 }
